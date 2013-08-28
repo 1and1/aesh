@@ -36,9 +36,9 @@ public class CommandLineFormatterTest extends TestCase {
 
         CommandLineParser clp = pb.generateParser();
 
-        assertEquals("Usage: man [OPTION...]\n"+
-                "  -d, --debug    emit debugging messages\n"+
-                "  -D, --default  reset all options to their default values\n",
+        assertEquals(String.format("Usage: man [OPTION...]%n" +
+                "  -d, --debug    emit debugging messages%n"+
+                "  -D, --default  reset all options to their default values%n"),
                 clp.printHelp());
     }
 
@@ -71,10 +71,10 @@ public class CommandLineFormatterTest extends TestCase {
 
         CommandLineParser clp = pb.generateParser();
 
-        assertEquals("Usage: man [OPTION...]\n"+
-                "  -d, --debug            emit debugging messages\n"+
-                "  -D, --default          reset all options to their default values\n"+
-                "  -f, --file=<filename>  set the filename\n",
+        assertEquals(String.format("Usage: man [OPTION...]%n"+
+                "  -d, --debug            emit debugging messages%n"+
+                "  -D, --default          reset all options to their default values%n"+
+                "  -f, --file=<filename>  set the filename%n"),
                 clp.printHelp());
     }
 
