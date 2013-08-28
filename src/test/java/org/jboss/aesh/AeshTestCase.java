@@ -101,4 +101,8 @@ public abstract class AeshTestCase extends TestCase {
 
         assertEquals(expected, in);
     }
+    
+    public void tearDown(){
+    	Settings.getInstance().resetToDefaults();
+    }
 }
