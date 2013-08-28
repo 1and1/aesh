@@ -27,8 +27,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git://github.com/1and1/aesh.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/1and1/aesh.git</developerConnection>
+        <connection>scm:git:https://github.com/1and1/aesh.git</connection>
+        <developerConnection>scm:git:https://github.com/1and1/aesh.git</developerConnection>
         <url>http://aeshell.github.com/</url>
     </scm>
 
