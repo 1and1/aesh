@@ -67,6 +67,12 @@ public class Parser {
         int numColumns = termWidth / maxLength;
         if(numColumns > displayList.size()) // we dont need more columns than items
             numColumns = displayList.size();
+        
+        // AESH-80: Java.lang.ArithmeticException: / by zero threw if termWidth < maxLength in Parser
+        if(numColumns < 1){
+        	numColumns = 1;
+        }
+        
         int numRows = displayList.size() / numColumns;
 
         // add a row if we cant display all the items
